@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/vanilla-html-css-and-js-TNcIVOwYL](https://www.frontendmentor.io/solutions/vanilla-html-css-and-js-TNcIVOwYL)
+- Live Site URL: [https://maicon-fs.github.io/stats-preview-card-component/](https://maicon-fs.github.io/stats-preview-card-component/)
 
 ## My process
 
@@ -37,7 +37,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Desktop-first workflow
+- Desktop-first approach
 
 ## Author
 
