@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --very-dark-blue-mainbg: hsl(233, 47%, 7%);
+    --dark-desatured-blue-cardbg: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsl(277, 64%, 61%);
+
+    --slightly-transparent-white-mainparagraph: hsla(0, 0%, 100%, .75);
+    --slightly-transparent-white-statheadings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--very-dark-blue-mainbg);
+}
+
+.card-container{
+    max-width: 1110px;
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-desatured-blue-cardbg);
+    display: grid;
+    grid-template: 1fr / 1.1fr .9fr;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info{
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 75px;
+}
+
+.info .title{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.accent{
+    color: var(--soft-violet-accent);
+}
+
+.info .title, .info .achievements .stats{
+    color: white;
+}
+
+.info .description{
+    margin-top: 33px;
+    color: var(--slightly-transparent-white-mainparagraph);
+    margin-bottom: 80px;
+}
+
+.achievements{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.info .achievements .stats{
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.info .achievements .text{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--slightly-transparent-white-statheadings);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.photo{
+    background-image: url('../images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.photo::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170, 92, 219, 0.5);
+    z-index: 1;
+    position: absolute;
+}
+
+@media screen and (max-width: 420px) {
+    
+    .card-container{
+        max-width: 86%;
+        width: 100%;
+        max-height: 80%;
+        height: auto;
+        grid-template: 1fr 1fr / 1fr;
+    }
+
+    .info{
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        order: 1;
+    }
+
+    .info .title{
+        font-size: 1.2rem;
+    }
+
+    .info .description{
+        font-size: .8rem;
+        margin-bottom: 2rem;
+    }
+
+    .achievements{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+    .info .achievements .stats{
+        font-size: 1.3rem;
+    }
+
+    .info .achievements .text{
+        font-size: .5rem;
+    }
+    
+    .achieve_info{
+        margin-bottom: 1rem;
+    }
+
+    .photo{
+        min-height: 130px;
+        height: 100%;
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .info .title{
+        font-size: 1.2rem;
+    }
+
+    .info .description{
+        margin-top: 1rem;
+        font-size: .7rem;
+        margin-bottom: 1rem;
+    }
+
+    .info .achievements .stats{
+        font-size: 1rem;
+    }
+
+    .info .achievements .text{
+        font-size: .5rem;
+    }
+    
+}
